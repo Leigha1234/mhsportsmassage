@@ -12,11 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <script src="config.js" defer></script>
-  <script src="script.js" defer></script>
-
   <style>
-    /* Use the existing filenames in your assets folder. */
     .hero-photo {
       background-image:
         linear-gradient(150deg, #20334d22, #0b142877),
@@ -51,6 +47,34 @@
         url("assets/IMG_7087.jpg");
       background-position: center 35%;
     }
+
+    .booking-notice {
+      margin-top: 20px;
+      max-width: 540px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--lime, #c5f23b);
+      background: rgba(255, 255, 255, 0.05);
+      color: #d8e0e9;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .booking-notice a,
+    .booking-url {
+      color: var(--lime, #c5f23b);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .booking-content .booking-url {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .booking-content .btn {
+      max-width: 100%;
+    }
   </style>
 </head>
 
@@ -75,6 +99,7 @@
       </a>
 
       <button
+        type="button"
         class="menu-toggle"
         id="menu-toggle"
         aria-controls="nav"
@@ -94,7 +119,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="btn btn-lime nav-book" data-book>
+      <button type="button" class="btn btn-lime nav-book" data-book>
         BOOK NOW <span>↗</span>
       </button>
     </div>
@@ -124,12 +149,21 @@
           </p>
 
           <div class="hero-actions">
-            <button class="btn btn-lime" data-book>
+            <button type="button" class="btn btn-lime" data-book>
               BOOK YOUR SESSION <span>↗</span>
             </button>
             <a class="btn btn-outline" href="#services">
               EXPLORE TREATMENTS <span>↓</span>
             </a>
+          </div>
+
+          <div class="booking-notice">
+            Our new booking page is coming soon. For now, please use
+            <a
+              href="https://mhsportsmassage.setmore.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >our existing booking page ↗</a>.
           </div>
 
           <div class="hero-proof">
@@ -175,7 +209,7 @@
             Get a feel for what a session looks like. Mitch works with
             you to understand areas of tension and adapt your treatment.
           </p>
-          <button class="btn btn-lime" data-book>
+          <button type="button" class="btn btn-lime" data-book>
             BOOK WITH MITCH ↗
           </button>
         </div>
@@ -270,7 +304,7 @@
                 Targeted treatment for active bodies, muscle tightness
                 and post-training recovery.
               </p>
-              <button class="text-link" data-book>
+              <button type="button" class="text-link" data-book>
                 BOOK A SESSION ↗
               </button>
             </div>
@@ -290,7 +324,7 @@
                 Focused pressure and soft tissue techniques tailored
                 to areas of tension.
               </p>
-              <button class="text-link" data-book>
+              <button type="button" class="text-link" data-book>
                 BOOK A SESSION ↗
               </button>
             </div>
@@ -310,7 +344,7 @@
                 Not sure what you need? Talk through your goals and
                 choose an appropriate treatment.
               </p>
-              <button class="text-link" data-book>
+              <button type="button" class="text-link" data-book>
                 BOOK A SESSION ↗
               </button>
             </div>
@@ -331,7 +365,7 @@
           YOU DON'T HAVE TO BE<br>
           AN ATHLETE TO <em>FEEL BETTER.</em>
         </h2>
-        <button class="btn btn-dark" data-book>
+        <button type="button" class="btn btn-dark" data-book>
           LET'S GET YOU BOOKED ↗
         </button>
       </div>
@@ -373,7 +407,7 @@
             <span>✓ Based in Lossiemouth</span>
           </div>
 
-          <button class="btn btn-lime" data-book>
+          <button type="button" class="btn btn-lime" data-book>
             BOOK WITH MITCH ↗
           </button>
 
@@ -406,7 +440,7 @@
             <p class="package-detail">
               Six sessions at full price, seventh at half price.
             </p>
-            <button class="btn btn-outline-light" data-book>
+            <button type="button" class="btn btn-outline-light" data-book>
               ENQUIRE / BOOK ↗
             </button>
           </article>
@@ -419,7 +453,7 @@
             <p class="package-detail">
               Ten sessions at full price, eleventh free.
             </p>
-            <button class="btn btn-dark" data-book>
+            <button type="button" class="btn btn-dark" data-book>
               ENQUIRE / BOOK ↗
             </button>
           </article>
@@ -432,7 +466,7 @@
             <p class="package-detail">
               Special member rate. Eligibility may be checked.
             </p>
-            <button class="btn btn-outline-light" data-book>
+            <button type="button" class="btn btn-outline-light" data-book>
               ENQUIRE / BOOK ↗
             </button>
           </article>
@@ -455,7 +489,7 @@
             Real feedback matters. MH Sports Massage's existing booking
             profile displays a 5.0 rating across 89 reviews.
           </p>
-          <button class="btn btn-outline" data-book>
+          <button type="button" class="btn btn-outline" data-book>
             EXPERIENCE IT YOURSELF ↗
           </button>
         </div>
@@ -536,8 +570,13 @@
               How do I book an appointment? <span>+</span>
             </summary>
             <p>
-              Use any Book Now button on this website to open the online
-              booking system when it has been connected, or call
+              Our new booking page is coming soon. For now, please use
+              <a
+                href="https://mhsportsmassage.setmore.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >https://mhsportsmassage.setmore.com/</a>
+              to book your appointment, or call
               <a href="tel:+447368911727">07368 911727</a>.
             </p>
           </details>
@@ -561,7 +600,7 @@
           <p>
             Take the first step towards a more comfortable, confident you.
           </p>
-          <button class="btn btn-lime" data-book>
+          <button type="button" class="btn btn-lime" data-book>
             BOOK YOUR APPOINTMENT ↗
           </button>
         </div>
@@ -640,21 +679,121 @@
     id="booking-dialog"
     class="booking-dialog"
     aria-labelledby="booking-title"
+    aria-describedby="booking-description"
   >
     <div class="dialog-head">
       <div>
         <span class="kicker">MH SPORTS MASSAGE</span>
-        <h2 id="booking-title">BOOK YOUR SESSION</h2>
+        <h2 id="booking-title">BOOKING PAGE COMING SOON</h2>
       </div>
+
       <button
+        type="button"
         id="close-booking"
         class="close-dialog"
         aria-label="Close booking"
+        autofocus
       >
         ✕
       </button>
     </div>
 
     <div id="booking-content" class="booking-content">
+      <p id="booking-description">
+        Our new booking page is coming soon. For now, please use our
+        existing booking page to arrange your appointment.
+      </p>
+
+      <a
+        class="booking-url"
+        href="https://mhsportsmassage.setmore.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://mhsportsmassage.setmore.com/
+      </a>
+
+      <div>
+        <a
+          class="btn btn-lime"
+          href="https://mhsportsmassage.setmore.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOK ON SETMORE ↗
+        </a>
+      </div>
+
       <p>
-        Online booking is being connected. In the meantime, please
+        Prefer to speak to Mitch?
+        <a href="tel:+447368911727">Call 07368 911727</a>.
+      </p>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const year = document.getElementById("year");
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav");
+      const bookingDialog = document.getElementById("booking-dialog");
+      const closeBooking = document.getElementById("close-booking");
+      const bookingUrl = "https://mhsportsmassage.setmore.com/";
+
+      year.textContent = new Date().getFullYear();
+
+      function closeMenu() {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+      }
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close menu" : "Open menu"
+        );
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      document.querySelectorAll("[data-book]").forEach((button) => {
+        button.addEventListener("click", () => {
+          closeMenu();
+
+          if (typeof bookingDialog.showModal === "function") {
+            if (!bookingDialog.open) bookingDialog.showModal();
+          } else {
+            window.location.href = bookingUrl;
+          }
+        });
+      });
+
+      closeBooking.addEventListener("click", () => {
+        bookingDialog.close();
+      });
+
+      bookingDialog.addEventListener("click", (event) => {
+        if (event.target !== bookingDialog) return;
+
+        const bounds = bookingDialog.getBoundingClientRect();
+        const outside =
+          event.clientX < bounds.left ||
+          event.clientX > bounds.right ||
+          event.clientY < bounds.top ||
+          event.clientY > bounds.bottom;
+
+        if (outside) bookingDialog.close();
+      });
+    })();
+  </script>
+</body>
+</html>
